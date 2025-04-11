@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longevity Snapshot Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Longevity Snapshot Assessment</h1>
+            <p class="subtitle">Evaluate key lifestyle factors affecting your longevity</p>
+        </header>
+
+        <div class="chat-container">
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be displayed here -->
+            </div>
+            <div class="user-input">
+                <input type="text" id="user-message" placeholder="Type your response here...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="domain-progress">
+                <div class="domain sleep">
+                    <span class="domain-label">Sleep</span>
+                    <div class="progress-bar">
+                        <div class="progress" id="sleep-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="domain stress">
+                    <span class="domain-label">Stress</span>
+                    <div class="progress-bar">
+                        <div class="progress" id="stress-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="domain physical">
+                    <span class="domain-label">Physical</span>
+                    <div class="progress-bar">
+                        <div class="progress" id="physical-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="domain nutrition">
+                    <span class="domain-label">Nutrition</span>
+                    <div class="progress-bar">
+                        <div class="progress" id="nutrition-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="domain social">
+                    <span class="domain-label">Social</span>
+                    <div class="progress-bar">
+                        <div class="progress" id="social-progress" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-container" id="results-container" style="display: none;">
+            <h2>Your Longevity Snapshot Results</h2>
+            <div class="results-chart">
+                <canvas id="results-chart"></canvas>
+            </div>
+            <div class="domain-scores">
+                <h3>Domain Scores</h3>
+                <div class="domain-score-grid" id="domain-score-grid">
+                    <!-- Domain scores will be added here -->
+                </div>
+            </div>
+            <div class="recommendations">
+                <h3>Personalized Recommendations</h3>
+                <ul id="recommendations-list">
+                    <!-- Recommendations will be added here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
